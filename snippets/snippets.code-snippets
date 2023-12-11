@@ -1,0 +1,250 @@
+{
+	// Theme Redone WordPress snippets
+
+	"trb:text": {
+		"scope": "json",
+		"prefix": "trbs:text",
+		"body": [
+			"\"${1:text_field_name}\": {",
+			"\t\"type\": \"object\",",
+			"\t\"field_meta\": {",
+			"\t\t\"type\": \"text\",",
+			"\t\t\"label\": \"${2:Title}\",",
+			"\t\t\"max_chars\": ${3:50}",
+			"\t},",
+			"\t\"default\": {",
+			"\t\t\"text\": \"${4}\"",
+			"\t}",
+			"}"
+		],
+		"description": "The snippet of code above will generate a simple input control for managing text data. The field name will be “text_field_example”, its label will be “Title” and it will be empty by default."
+	},
+
+	"trb:freeform": {
+		"scope": "json",
+		"prefix": "trbs:freeform",
+		"body": [
+			"\"${1:freeform_field_name}\": {",
+			"\t\"type\": \"object\",",
+			"\t\"field_meta\": {",
+			"\t\t\"type\": \"freeform\",",
+			"\t\t\"label\": \"${2:Content (Classic Editor)}\"",
+			"\t},",
+			"\t\"default\": {",
+			"\t\t\"text\": \"${3}\"",
+			"\t}",
+			"}"
+		],
+		"description": "This snippet of code will generate a Classic Editor Instance for managing longer form text data. The field name will be “content”, its label will be “Content (Classic Editor)” and it will be empty by default."
+	},
+
+	"trb:number": {
+		"scope": "json",
+		"prefix": "trbs:number",
+		"body": [
+			"\"${1:number_field_name}\": {",
+			"\t\"type\": \"object\",",
+			"\t\"field_meta\": {",
+			"\t\t\"type\": \"number\",",
+			"\t\t\"label\": \"${2:Title}\"",
+			"\t},",
+			"\t\"default\": {",
+			"\t\t\"value\": ${3:0}",
+			"\t}",
+			"}"
+		],
+		"description": "This snippet of code will generate a simple input control (type=”number”) for managing number data. The field name will be “number_field”, its label will be “Number Field” and it will be zero by default."
+	},
+
+	"trb:range": {
+		"scope": "json",
+		"prefix": "trbs:range",
+		"body": [
+			"\"${1:range_field_name}\": {",
+			"\t\"type\": \"object\",",
+			"\t\"field_meta\": {",
+			"\t\t\"type\": \"range\",",
+			"\t\t\"label\": \"${2:Title}\",",
+			"\t\t\"min\": ${3:0},",
+			"\t\t\"max\": ${4:100},",
+			"\t\t\"step\": ${5:10}",
+			"\t},",
+			"\t\"default\": {",
+			"\t\t\"value\": ${6:0}",
+			"\t}",
+			"}"
+		],
+		"description": "This snippet of code will generate Gutenberg’s RangeControl component for managing number data. The field name will be “range_field_example”, its label will be “Range Slider Example” and it will be zero by default."
+	},
+	
+	"trb:datetime": {
+		"scope": "json",
+		"prefix": "trbs:datetime",
+		"body": [
+			"\"${1:datetime_field_name}\": {",
+			"\t\"type\": \"object\",",
+			"\t\"field_meta\": {",
+			"\t\t\"type\": \"range\",",
+			"\t\t\"label\": \"${2:Title}\",",
+			"\t\t\"min\": ${3:0},",
+			"\t\t\"max\": ${4:100},",
+			"\t\t\"step\": ${5:10}",
+			"\t},",
+			"\t\"default\": {",
+			"\t\t\"value\": ${6:0}",
+			"\t}",
+			"}"
+		],
+		"description": "This snippet of code will generate a simple DateTime control. The field name will be “event_date_time”, its label will be “Event Date and Time” and it will have a value of null (no date and time selected) by default."
+	},
+
+	"trb:checkbox": {
+		"scope": "json",
+		"prefix": "trbs:checkbox",
+		"body": [
+			"\"${1:checkbox_field_name}\": {",
+			"\t\"type\": \"object\",",
+			"\t\"field_meta\": {",
+			"\t\t\"type\": \"checkbox\",",
+			"\t\t\"label\": \"${2:Title}\"",
+			"\t},",
+			"\t\"default\": {",
+			"\t\t\"checked\": ${3:false}",
+			"\t}",
+			"}"
+		],
+		"description": "This snippet of code will generate a simple checkbox control. The field name will be “checkbox_field_name”, its label will be “Checkbox Field Name” and it will be unchecked by default."
+	},
+
+	"trb:toggle": {
+		"scope": "json",
+		"prefix": "trbs:toggle",
+		"body": [
+			"\"${1:toggle_field_name}\": {",
+			"\t\"type\": \"object\",",
+			"\t\"field_meta\": {",
+			"\t\t\"type\": \"toggle\",",
+			"\t\t\"label\": \"${2:Title}\"",
+			"\t},",
+			"\t\"default\": {",
+			"\t\t\"checked\": ${3:false}",
+			"\t}",
+			"}"
+		],
+		"description": "This snippet of code will generate a simple toggle control for managing boolean data. The field name will be “should_show_title”, its label will be “Toggle the Title” and it will be false by default."
+	},
+
+	"trb:select": {
+		"scope": "json",
+		"prefix": "trbs:select",
+		"body": [
+			"\"${1:select_field_name}\": {",
+			"\t\"type\": \"object\",",
+			"\t\"field_meta\": {",
+			"\t\t\"type\": \"select\",",
+			"\t\t\"label\": \"${2:Title}\",",
+			"\t\t\"options\": [",
+			"\t\t\t{",
+			"\t\t\t\t\"label\": \"${3:Option 1}\",",
+			"\t\t\t\t\"value\": \"${4:option_1}\"",
+			"\t\t\t},",
+			"\t\t\t{",
+			"\t\t\t\t\"label\": \"${5:Option 2}\",",
+			"\t\t\t\t\"value\": \"${6:option_2}\"",
+			"\t\t\t}",
+			"\t\t]",
+			"\t},",
+			"\t\"default\": {",
+			"\t\t\"value\": \"${7:option_1}\"",
+			"\t}",
+			"}"
+		],
+		"description": "This snippet of code will generate a simple select control for managing a list of options. The field name will be “select_field_name”, its label will be “Select Field Name” and it will have a default value of “option_1”."
+	},
+
+	"trb:colorpicker": {
+		"scope": "json",
+		"prefix": "trbs:colorpicker",
+		"body": [
+			"\"${1:colorpicker_field_name}\": {",
+			"\t\"type\": \"object\",",
+			"\t\"field_meta\": {",
+			"\t\t\"type\": \"color\",",
+			"\t\t\"options\": [",
+			"\t\t\t{ \"name\": \"${2:Red}\", \"color\": \"${3:#f00}\" },",
+			"\t\t\t{ \"name\": \"${4:Blue}\", \"color\": \"${5:#00f}\" },",
+			"\t\t\t{ \"name\": \"${6:White}\", \"color\": \"${7:#fff}\" }",
+			"\t\t],",
+			"\t\t\"label\": \"${8:Text Color}\"",
+			"\t},",
+			"\t\"default\": {",
+			"\t\t\"value\": \"${9:#f00}\"",
+			"\t}",
+			"}"
+		],
+		"description": "This snippet of code will generate a simple color picker control with three predefined colors. The field name will be “text_color”, its label will be “Text Color” and it will have a value of red (#f00) by default."
+	},
+
+	"trb:image": {
+		"scope": "json",
+		"prefix": "trbs:image",
+		"body": [
+
+			"\"${1:image_field_name}\": {",
+			"\t\"type\": \"object\",",
+			"\t\"field_meta\": {",
+			"\t\t\"type\": \"image\",",
+			"\t\t\"label\": \"${2:Title}\"",
+			"\t},",
+			"\t\"default\": {",
+			"\t\t\"src\": \"${3}\",",
+			"\t\t\"id\": ${4:null}",
+			"\t}",
+			"}"
+		],		
+
+		"description": "
+		This snippet of code will generate an Image Selector for managing image data. The field name will be “image_field_name”, its label will be “Image Field Name” and it will be empty by default.
+		"
+	},
+
+	"trb:video": {
+		"scope": "json",
+		"prefix": "trbs:video",
+		"body": [
+			"\"${1:video_field_name}\": {",
+			"\t\"type\": \"object\",",
+			"\t\"field_meta\": {",
+			"\t\t\"type\": \"video\",",
+			"\t\t\"label\": \"${2:Video}\"",
+			"\t},",
+			"\t\"default\": {",
+			"\t\t\"src\": \"${3}\",",
+			"\t\t\"id\": ${4:null}",
+			"\t}",
+			"}"
+		],		
+		"description": "This snippet of code will generate a Video Selector. The field name will be video_field_name, its label will be “Video” and by default, it won’t have a selected video."
+	},
+
+	"trb:cta": {
+		"scope": "json",
+		"prefix": "trbs:cta",
+		"body": [
+			"\"${1:link_field_name}\": {",
+			"\t\"type\": \"object\",",
+			"\t\"field_meta\": {",
+			"\t\t\"type\": \"cta\",",
+			"\t\t\"label\": \"${2:Link}\"",
+			"\t},",
+			"\t\"default\": {",
+			"\t\t\"title\": \"${3}\",",
+			"\t\t\"url\": \"${4}\",",
+			"\t\t\"target\": ${5:false}",
+			"\t}",
+			"}"
+		],		
+		"description": "This snippet of code will generate a Video Selector. The field name will be video_field_name, its label will be “Video” and by default, it won’t have a selected video."
+	},
+
+}

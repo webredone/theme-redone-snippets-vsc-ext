@@ -1,0 +1,39 @@
+{
+  "name": "theme-redone-snippets-wordpress",
+  "version": "0.0.1",
+  "displayName": "Theme Redone Snippets (WordPress)",
+  "description": "A VS Code extension providing efficient ThemeRedone snippets for rapid Gutenberg WordPress theme development.",
+  "homepage": "https://webredone.com/theme-redone/",
+  "publisher": "WebRedone",
+  "icon": "images/theme-redone-vsc-icon.png",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webredone/trb-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/webredone/trb-cli/issues"
+  },
+  "keywords": [
+    "theme-redone",
+    "wordpress",
+    "snippets",
+    "snippet",
+    "gutenberg",
+    "block"
+  ],
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "json",
+        "path": "./snippets/snippets.code-snippets"
+      }
+    ]
+  }
+}
