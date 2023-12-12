@@ -29,9 +29,15 @@ No known issues at this time. If you encounter any problems, please report them 
 
 Keep an eye on this section for updates and release notes for new versions of the extension.
 
-### 1.0.0
+### 0.0.1
 
 Initial release of theme-redone-snippets-wordpress.
+
+---
+
+### 0.0.2
+
+Testing the automation via GitHub actions.
 
 ---
 
