@@ -1,5 +1,5 @@
 {
-	// Theme Redone WordPress snippets
+	// Theme Redone snippets
 
 	"trb:text": {
 		"scope": "json",
@@ -244,7 +244,83 @@
 			"\t}",
 			"}"
 		],		
-		"description": "This snippet of code will generate a Video Selector. The field name will be video_field_name, its label will be “Video” and by default, it won’t have a selected video."
+		"description": "This snippet of code will generate a CTA control. The field name will be “link_field_name”, its label will be “Link” and it will be empty by default."
+	},
+
+	"trb:objectselector": {
+		"scope": "json",
+		"prefix": "trbs:objectselector",
+		"body": [
+			"\"${1:object_field_name}\": {",
+			"\t\"type\": \"object\",",
+			"\t\"field_meta\": {",
+			"\t\t\"object_type\": \"${2|post,term|}\",",
+			"\t\t\"objects\": [\"${3:posts}\"],",
+			"\t\t\"type\": \"object_selector\",",
+			"\t\t\"label\": \"${4:Post}\"",
+			"\t},",
+			"\t\"default\": {",
+			"\t\t\"id\": ${5:null},",
+			"\t\t\"title\": \"${6}\"",
+			"\t}",
+			"}"
+		],
+		"description": "This snippet of code will generate an object_selector control. The field name will be “object_field_name”, its label will be “Post” and it will not have anything selected by default. This particular example will make it possible for us to search for, and select one post of the “post” post type."
+	},
+
+	"trb:repeater": {
+		"scope": "json",
+		"prefix": "trbs:repeater",
+		"body": [
+			"\"${1:repeater_field_name}\": {",
+			"\t\"type\": \"array\",",
+			"\t\"field_meta\": {",
+			"\t\t\"type\": \"repeater\",",
+			"\t\t\"label\": \"${2:Fields}\",",
+			"\t\t\"subfields\": {",
+			"\t\t\t\"title\": {",
+			"\t\t\t\t\"type\": \"object\",",
+			"\t\t\t\t\"field_meta\": {",
+			"\t\t\t\t\t\"type\": \"text\",",
+			"\t\t\t\t\t\"label\": \"Title\"",
+			"\t\t\t\t},",
+			"\t\t\t\t\"default\": {",
+			"\t\t\t\t\t\"text\": \"\"",
+			"\t\t\t\t}",
+			"\t\t\t},",
+			"\t\t\t\"cta\": {",
+			"\t\t\t\t\"type\": \"object\",",
+			"\t\t\t\t\"field_meta\": {",
+			"\t\t\t\t\t\"type\": \"cta\",",
+			"\t\t\t\t\t\"label\": \"CTA\"",
+			"\t\t\t\t},",
+			"\t\t\t\t\"default\": {",
+			"\t\t\t\t\t\"title\": \"\",",
+			"\t\t\t\t\t\"url\": \"\",",
+			"\t\t\t\t\t\"target\": false",
+			"\t\t\t\t}",
+			"\t\t\t},",
+			"\t\t\t\"image\": {",
+			"\t\t\t\t\"type\": \"object\",",
+			"\t\t\t\t\"field_meta\": {",
+			"\t\t\t\t\t\"type\": \"image\",",
+			"\t\t\t\t\t\"label\": \"Image\"",
+			"\t\t\t\t},",
+			"\t\t\t\t\"default\": {",
+			"\t\t\t\t\t\"src\": \"\",",
+			"\t\t\t\t\t\"id\": null",
+			"\t\t\t\t}",
+			"\t\t\t}",
+			"\t\t}",
+			"\t},",
+			"\t\"default\": []",
+			"}"
+		],
+		"description": "
+		This snippet of code will generate a repeater control. The field name will be “repeater_field_name”, its label will be “Fields” and it will be empty by default. The repeater will have three subfields: title, cta and image. The title will be a text field, the cta will be a CTA control and the image will be an Image Selector. --- It is also possible to use repeater fields inside repeater fields. This way, we can create nested repeaters. This is useful for creating complex data structures. But, only one level deep."
 	},
 
 }
+
+
+
