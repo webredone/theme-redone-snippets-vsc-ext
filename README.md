@@ -2,7 +2,7 @@
 
 This is the README for the extension "theme-redone-snippets-wordpress". This extension is designed to enhance your WordPress theme development experience by providing a set of handy snippets for the [ThemeRedone](https://webredone.com/theme-redone) framework.
 
-![trb snippets usage example](https://raw.githubusercontent.com/webredone/theme-redone-docs-assets/main/img/theme-redone-snippets-usage.gif)
+![trb snippets usage example gif](https://raw.githubusercontent.com/webredone/theme-redone-docs-assets/main/img/theme-redone-snippets-usage.gif)
 
 ## Features
 
