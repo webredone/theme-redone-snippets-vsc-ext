@@ -1,6 +1,6 @@
 {
   "name": "theme-redone-snippets-wordpress",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "displayName": "Theme Redone Snippets (WordPress)",
   "description": "A VS Code extension providing efficient ThemeRedone snippets for rapid Gutenberg WordPress theme development.",
   "homepage": "https://webredone.com/theme-redone/",
